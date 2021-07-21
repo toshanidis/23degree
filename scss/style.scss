@@ -421,6 +421,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  &__content-media{
+    display: none;
+  }
+
   &__content-item {
     display: flex;
     justify-content: center;
@@ -581,7 +585,8 @@
   }
 
   &__content-img {
-    margin-bottom: 33px;
+    margin: 0 auto 33px;
+
   }
 
   &__content-link {
@@ -635,7 +640,6 @@
   &__input-inner {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   &__input {
