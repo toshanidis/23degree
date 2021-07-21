@@ -7,7 +7,28 @@ $(function () {
     dots: true,
     arrows: false,
     slidesToShow: 7,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 544,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
+    
   });
 
   $('.header__menu-icon').on('click', function(event) {

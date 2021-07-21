@@ -1,0 +1,272 @@
+/* Широкоформатный экран — 1200px */
+@media (max-width : 1200px) {}
+
+/* Десктоп — 992px */
+@media (max-width : 992px) {
+  .header{
+    &__form{
+      max-width: 600px;
+      justify-content: space-between;
+    }
+    &__input+.header__input {
+      margin-left: 0;
+    }
+    &__btn{
+      &::before{
+        display: none;
+      }
+    }
+  }
+  .service{
+    &__content-title {     
+      font-size: 24px;
+      line-height: 24px;     
+    }
+    &__content-text {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  .questions{
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__form {
+      margin: 0 0 30px;
+    }
+    &__contact{
+      margin-left: 0;
+      margin-right: auto;
+    }
+    &__contact-list{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width : 860px) {
+  .portfolio{
+    &__filter-btn{
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    &__btn{
+      display: block;
+      max-width: 100%;
+      width: 50%;
+      padding: 15px 0;
+      &:first-child {
+        border-radius: 5px;
+        padding: 15px 0;
+      }
+
+      &:last-child {
+        border-radius: 5px;
+        padding: 15px 0;
+      }
+    }
+    &__btn--active {
+      text-transform: uppercase;
+      line-height: 14px;
+      padding: 15px 0;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: $blue;
+      color: #fff;
+      box-shadow: 0 0 0 3px $blue;
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+/* Планшеты — 768px */
+@media (max-width : 768px) {
+  .header{
+    &__title {
+      font-size: 36px;
+      line-height: 32px;
+    }
+    &__subtitle {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    &__content-text{
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__form {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .service{
+    &__wrapper {
+      padding: 30px 0 20px;
+    }
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+      column-gap: 29px;
+    }
+    &__info-box{
+      border-bottom: 1px solid $accent;
+      
+      padding-bottom: 10px;
+    }
+    &__content-img{
+      display: none;
+    }
+  }
+  .portfolio{
+    &__content{
+      gap: 15px;
+    }
+  }
+  .team{
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__quote{
+      padding: 18px 50px 5px;
+    }
+  }
+  .blog{
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__content-item{
+      margin-bottom: 30px;
+      max-width: 555px;
+      width: 100%;
+    }
+    &__content-img{
+      margin-bottom: 15px;
+    }
+  }
+  .questions{
+    &__input-inner {
+      flex-direction: column;
+    }
+  }
+  .footer{
+    &__menu{
+      flex-direction: column;
+      max-width: 200px;
+    }
+    &__menu-link{
+      margin-bottom: 10px;
+    }
+    &__socials{
+      margin-left: 10px;
+    }
+    &__bottom{
+      flex-direction: column;
+    }
+    &__logo-box{
+      margin-right: 0;
+      margin-left: auto;
+    }
+    &__logo-text{
+      font-size: 10px;
+    }
+  }
+}
+
+/* Телефоны —  544px */
+@media (max-width : 544px) {
+  .header {
+    &__top {
+      flex-direction: column;
+    }
+    &__row{
+      margin-top: 15px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 22px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__content-text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__footnote-text{
+      margin-bottom: 50px;
+    }
+  }
+  .portfolio {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      justify-items: center;
+    }
+  }
+  .process{
+    &__wrapper {
+      padding: 45px 0 35px;
+    }
+    &__content{
+      display: none;
+    } 
+    &__content-media{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      font-size: 30px;
+      line-height: 38px;
+    }
+    &__content-item-media{
+      border: 1px solid $accent;
+      border-radius: 3px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    &__content-text-media{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5%;
+    }
+    &__content-img-media{
+      opacity: .2;
+      overflow: hidden;
+    }
+  }
+  .team {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__quote {
+      padding: 18px 25px 5px;
+    }
+  }
+  .questions{
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+  .map {
+    iframe {
+      height: 50vh;
+    }
+  }
+}
+
+/* Айфон в портретном режиме — 320px */
+@media (max-width : 320px) {}
